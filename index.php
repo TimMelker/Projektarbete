@@ -36,10 +36,14 @@
 		</form>
     </div>
 </div>
+<<<<<<< HEAD:index.php
 
 <div id="footerDiv">
 	<?php include ('footer.php'); ?>
 </div>
 
+=======
+<?php include ('footer.php'); ?>
+>>>>>>> 7d94d50301d2ab7cd05b6e60ac9e3318ba86ec56:index.php
 </body>
 </html>

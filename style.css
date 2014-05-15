@@ -106,7 +106,11 @@ a{
 	color: black;
 }
 
+<<<<<<< HEAD
 #loginBtn , #reglerBtn{
+=======
+#loginBtn{
+>>>>>>> 7d94d50301d2ab7cd05b6e60ac9e3318ba86ec56
 	border: 5px solid #3366FF;
 	background: #3366FF;
 	text-decoration: none;
@@ -114,6 +118,7 @@ a{
 	border-radius: 3px 3px 3px 3px;
 	box-shadow: 5px 5px 2px #2E5CE6;
 	color: black;
+<<<<<<< HEAD
 }
 
 #footerDiv{
@@ -125,4 +130,6 @@ a{
 
 #reglerBtn{
 	margin-left: 140px;
+=======
+>>>>>>> 7d94d50301d2ab7cd05b6e60ac9e3318ba86ec56
 }
