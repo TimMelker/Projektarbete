@@ -16,20 +16,26 @@
 	    	<h2>Inlogg</h2>
 	    	<label>
 	    		<span>Användarnamn: </span>
-	    		<input id="_userName" type="text" name="userName" placeholder="Ditt användarnamn" />
+	    		<input id="_userName" type="text" name="userName" placeholder="Ditt användarnamn" /><br>
 	    	</label>
 
 	    	<label id="passwordLabel">	    		
 	    		<span id="passSpan">Lösenord: </span>
-	    		<input id="password" type="text" name="passwor" placeholder="Ditt lösenord" />
+	    		<input id="password" type="text" name="passwor" placeholder="Ditt lösenord" /><br>
 	    	</label>
 
 	    	<label id="btnLabel">
-	    		<input type="button" class="button" value="Registrera" id="registerBtn" name="registerBtn"/>
-	    		<input type="button" class="button" value="Logga In" id="loginBtn" name="loginBtn"/>
+	    		<!--<input type="button" class="button" value="Registrera" id="registerBtn" name="registerBtn"/>-->
+	    		<a href="http://www.google.se">Registrera</a>
+	    	</label>
+	    	<label>
+	    		<!--<input type="button" class="button" value="Logga In" id="loginBtn" name="loginBtn"/>-->
+	    		<a href="http://www.google.se" id="loginBtn">Logga In</a>
+
 	    	</label>
 		</form>
     </div>
 </div>
+<?php include ('footer.php'); ?>
 </body>
 </html>

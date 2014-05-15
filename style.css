@@ -47,7 +47,7 @@ body{
 }
 
 #topDiv{
-	width: 300px;
+	width: 350px;
 	margin-left: auto;
 	margin-right: auto;
 	
@@ -63,6 +63,9 @@ body{
 
 #password{
 	 margin-top: 10px;
+}
+input{
+	width: 185px;
 }
 
 #passSpan{
@@ -91,4 +94,24 @@ h2{
 
 #loginBtn{
 	margin-left: 120px;
+}
+
+a{
+	border: 5px solid #FFFF00;
+	background: #FFFF00;
+	text-decoration: none;
+	padding: 5px 5px 5px 5px;
+	border-radius: 3px 3px 3px 3px;
+	box-shadow: 5px 5px 2px #E6E600;
+	color: black;
+}
+
+#loginBtn{
+	border: 5px solid #3366FF;
+	background: #3366FF;
+	text-decoration: none;
+	padding: 5px 5px 5px 5px;
+	border-radius: 3px 3px 3px 3px;
+	box-shadow: 5px 5px 2px #2E5CE6;
+	color: black;
 }
