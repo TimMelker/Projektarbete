@@ -45,6 +45,15 @@ table {
 body{
 	font-family: helvetica;
 }
+#logoDiv {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#logoDiv img {
+    width: 300px;
+    
+}
 
 #topDiv{
 	width: 350px;

@@ -6,11 +6,12 @@
 </head>
 
 <body>
+    <div id="logoDiv"><img src="images/logo.png"/>  </div>
 <div id="topDiv">
 	<div id="info">
 		<h1>Information om oss</h1>
 		<p>Information om sidan skrivs här</p>
-    </div>
+    </div><!--end info-->
     <div id="form">
 	    <form id="" name"" action="" method="" class="">
 	    	<h2>Inlogg</h2>
@@ -34,10 +35,10 @@
 
 	    	</label>
 		</form>
-    </div>
-</div>
+    </div><!--end form-->
+</div><!--end topDiv-->
 <div id="footerDiv">
 	<?php include ('footer.php'); ?>
-</div>
+</div><!--end footerDiv-->
 </body>
 </html>
