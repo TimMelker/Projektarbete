@@ -46,6 +46,20 @@ body{
 	font-family: helvetica;
 	background-color: #8CCBE7;
 }
+
+#userName , #password
+{
+	color: #9bcb3c;
+	font-size: 18px;
+	background: #F13C73;
+}
+
+::-webkit-input-placeholder
+{
+	color: #9bcb3c;
+}
+
+
 #logoDiv {
     width: 300px;
     margin-left: auto;

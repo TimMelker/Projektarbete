@@ -19,12 +19,12 @@
 	    	<h2>Inlogg</h2>
 	    	<label>
 	    		<span>Användarnamn: </span>
-	    		<input id="_userName" type="text" name="userName" placeholder="Ditt användarnamn" /><br>
+	    		<input id="userName" type="text" name="userName" placeholder="Ditt användarnamn" /><br>
 	    	</label>
 
 	    	<label id="passwordLabel">	    		
 	    		<span id="passSpan">Lösenord: </span>
-	    		<input id="password" type="password" name="passwor" placeholder="Ditt lösenord" /><br>
+	    		<input id="password" type="password" name="password" placeholder="Ditt lösenord" /><br>
 	    	</label>
 
 	    	<label id="btnLabel">
