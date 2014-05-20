@@ -15,7 +15,7 @@
 		<p>Information om sidan skrivs här</p>
     </div><!--end info-->
     <div id="form">
-	    <form id="" name"" action="" method="" class="">
+	    <form id="loginForm" name"loginForm" action="" method="POST" class="loginForm">
 	    	<h2>Inlogg</h2>
 	    	<label>
 	    		<span>Användarnamn: </span>
@@ -41,9 +41,9 @@
 </div><!--end topDiv-->
 
 
-</div>
 <div id="footerDiv">
 	<?php include ('footer.php'); ?>
 </div><!--end footerDiv-->
+
 </body>
 </html>
