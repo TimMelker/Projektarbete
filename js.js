@@ -20,7 +20,6 @@ $('.lightbox_trigger').click(function(e){
 	}
 
 });
-
-	$('#lightbox').live('click', function(){
+	$('#lightbox').on('click', function(){
 		$('#lightbox').hide();
 });

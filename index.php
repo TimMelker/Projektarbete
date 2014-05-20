@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css"/>
-
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js.js"></script>
 </head>
 
 <body>
@@ -23,7 +24,7 @@
 
 	    	<label id="passwordLabel">	    		
 	    		<span id="passSpan">Lösenord: </span>
-	    		<input id="password" type="text" name="passwor" placeholder="Ditt lösenord" /><br>
+	    		<input id="password" type="password" name="passwor" placeholder="Ditt lösenord" /><br>
 	    	</label>
 
 	    	<label id="btnLabel">
@@ -39,12 +40,9 @@
     </div><!--end form-->
 </div><!--end topDiv-->
 
-<!-- Lightbox för Om oss-->
-
-
 
 </div>
-<div id="footerDiv" class="lightbox_trigger">
+<div id="footerDiv">
 	<?php include ('footer.php'); ?>
 </div><!--end footerDiv-->
 </body>
