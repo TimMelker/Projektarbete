@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css"/>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js.js"></script>
 </head>
 
@@ -29,7 +30,7 @@
 
 	    	<label id="btnLabel">
 	    		<!--<input type="button" class="button" value="Registrera" id="registerBtn" name="registerBtn"/>-->
-	    		<a href="http://www.google.se">Registrera</a>
+	    		<a class="lightbox_trigger" href="#">Registrera</a>
 	    	</label>
 	    	<label>
 	    		<!--<input type="button" class="button" value="Logga In" id="loginBtn" name="loginBtn"/>-->
@@ -39,6 +40,11 @@
 		</form>
     </div><!--end form-->
 </div><!--end topDiv-->
+
+<!--<div id="regLight" class="regLighter"></div>
+<div id="regDark" class="regDarker"></div>-->
+
+
 
 
 <div id="footerDiv">

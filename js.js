@@ -6,20 +6,50 @@ $('.lightbox_trigger').click(function(e){
 
 	if ($('#lightbox').length > 0) {
 
-		$('#lightbox').show();
+		$('#lightbox').fadeIn();
 	}
 	else{
 		var lightbox =
 		'<div id="lightbox">' + 
 			'<p>Click to close</p>' + 
-		'<div id="content">' +  
-			'<p id="lightboxTxt">TEXT HÄR!</p>' + 
+			'<div id="content">' +  
+				'<p id="lightboxTxt">TEXT HÄR!</p>' + 
+			'</div>' +
 		'</div>';
 
 		$('body').append(lightbox);
+		$('#lightbox').fadeIn();
 	}
 
 });
-	$('#lightbox').on('click', function(){
-		$('#lightbox').hide();
+	$('body').on('click', '#lightbox', function(){
+		$('#lightbox').fadeOut();
+});
+
+$('#aboutBtn').click(function(e){
+
+	e.preventDefault();
+
+
+ 
+	if ($('#aboutLightbox').length > 0) {
+
+		$('#aboutLightbox').fadeIn();
+	}
+	else{
+		var lightbox =
+		'<div id="aboutLightbox">' + 
+			'<p>Click to close</p>' + 
+			'<div id="content">' +  
+				'<p id="lightboxTxt">TEXT HÄR!</p>' + 
+			'</div>' +
+		'</div>';
+
+		$('body').append(lightbox);
+		$('#aboutLightbox').fadeIn();
+	}
+
+});
+	$('body').on('click', '#aboutLightbox', function(){
+		$('#aboutLightbox').fadeOut();
 });
