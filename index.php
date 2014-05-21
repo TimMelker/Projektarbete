@@ -36,21 +36,11 @@
 	    	<label>
 	    		<!--<input type="button" class="button" value="Logga In" id="loginBtn" name="loginBtn"/>-->
 	    		<a href="http://www.google.se" id="loginBtn">Logga In</a>
-
 	    	</label>
 		</form>
     </div><!--end form-->
+    <a class="aboutLightbox" id="aboutBtn" href="">Om sidan</a>
 </div><!--end topDiv-->
-
-<!--<div id="regLight" class="regLighter"></div>
-<div id="regDark" class="regDarker"></div>-->
-
-
-
-
-<div id="footerDiv">
-	<?php include ('footer.php'); ?>
-</div><!--end footerDiv-->
 
 </body>
 </html>
