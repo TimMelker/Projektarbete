@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div id="logoDiv"><img src="images/logo.png" alt="StudentJobb"/>  </div>
+    <div id="logoDiv"><img src="images/logo.png" alt="StudentJobb" title="StudentJobb"/>  </div>
 <div id="topDiv">
 	<div id="info">
 		<h1>Information om oss</h1>
