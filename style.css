@@ -97,6 +97,7 @@ body{
 
 #lightboxTxt , #aboutLightbox #lightboxTxt
 {
+	color: black;
 	margin-top: 10%;
 	margin-right: auto;
 	margin-left: auto;
@@ -106,6 +107,15 @@ body{
 	-moz-box-shadow:0 0 25px white;
 	background-color: white;
 	max-width: 940px;
+}
+
+#lightbox #content{
+	margin-top: 15%;
+}
+
+#lightbox #content #imgCloudBusiness
+{
+	padding-right: 7%;
 }
 
 #aboutUs

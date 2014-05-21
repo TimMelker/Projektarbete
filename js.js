@@ -13,7 +13,7 @@ $('.lightbox_trigger').click(function(e){
 		var lightbox =
 		'<div id="lightbox">' + 
 			'<p>Click to close</p>' + 
-			'<div id="content">' + '<a href="#"><img src="images/cloudBusiness.png"/></a>' + '<a href="#"><img src="images/cloudStudent.png"/></a>' + 
+			'<div id="content">' + '<a href="#" id="imgCloudBusiness"><img src="images/cloudBusiness.png"/></a>' + '<a href="#"><img src="images/cloudStudent.png"/></a>' + 
 			'</div>' +
 		'</div>';
 		$('body').append(lightbox);
@@ -40,7 +40,7 @@ $('#aboutBtn').click(function(e){
 		'<div id="aboutLightbox">' + 
 			'<p>Click to close</p>' + 
 			'<div id="content">' +  
-				'<p id="lightboxTxt">TEXT HÄR!</p>' + 
+				'<p id="lightboxTxt"></p>' + 
 			'</div>' +
 		'</div>';
 
