@@ -41,6 +41,7 @@
     </div><!--end form-->
     <a class="aboutLightbox" id="aboutBtn" href="">Om sidan</a>
 </div><!--end topDiv-->
+<?php include ('footer.php'); ?>
 
 </body>
 </html>
