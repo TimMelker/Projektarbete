@@ -12,7 +12,7 @@ $('.lightbox_trigger').click(function(e){
 		var lightbox =
 		'<div id="lightbox">' + 
 			'<p>Click to close</p>' + 
-			'<div id="content">' + '<a href="#" id="imgCloudBusiness"><img src="images/cloudBusiness.png"/></a>' + '<a href="#"><img src="images/cloudStudent.png"/></a>' + 
+			'<div id="content">' + '<a href="registerBusiness.php" id="imgCloudBusiness"><img src="images/cloudBusiness.png"/></a>' + '<a href="#"><img src="images/cloudStudent.png"/></a>' + 
 			'</div>' +
 		'</div>';
 		$('body').append(lightbox);

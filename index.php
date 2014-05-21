@@ -13,14 +13,20 @@
     <div id="logoDiv"><img src="images/logo.png" alt="StudentJobb" title="StudentJobb"/>  </div>
     <div id="info">
 		<h1>StudentJobb</h1>
+
+		<!--start Info-->
 		<p>Många studenter lever idag med att ha det svårt att få ekonomin att gå runt. Samtidigt har många företag små arbeten som behöver utföras men tiden saknas att utföra dessa.
 Det här förändras genom tjänsten StudentJobb genom att föra samman företagen med studenterna, där företagen kan få mindre jobb utförda snabbt och effektivt och studenten får en lättare vardag genom att få ekonomin att gå runt. Studenten får även en väg in till arbetsmarknaden genom nya kontakter och utförda arbeten de kan visa upp för framtida arbetsgivare.
 Genom tjänsten StudentJobb kan företag snabbt få sina mindre arbeten utförda utan krav på fler arbetsuppgifter och ges fler kontakter för framtida anställda.</p>
-    </div><!--end info-->
+    </div>
+    <!--end info-->
+
+<!--start topDiv-->
 <div id="topDiv">
 	
+	<!--start Form-->
     <div id="form">
-	    <form id="loginForm" name="loginForm" action="#" method="POST" class="loginForm">
+	    <form id="loginForm" name="loginForm" action="" method="POST" class="loginForm">
 	    	<h2>Inlogg</h2>
 	    	<label>
 	    		<span>Användarnamn: </span>
@@ -33,25 +39,29 @@ Genom tjänsten StudentJobb kan företag snabbt få sina mindre arbeten utförda
 	    	</label>
 
 	    	<label id="btnLabel">
-	    		<!--<input type="button" class="button" value="Registrera" id="registerBtn" name="registerBtn"/>-->
 	    		<a class="lightbox_trigger" href="#">Registrera</a>
 	    	</label>
 	    	<label>
-	    		<!--<input type="button" class="button" value="Logga In" id="loginBtn" name="loginBtn"/>-->
-	    		<a href="http://www.google.se" id="loginBtn">Logga In</a>
+	    		<a href="login.php" id="loginBtn">Logga In</a>
 	    	</label>
 		</form>
-    </div><!--end form-->
+    </div>
+    <!--end form-->
+
     <a class="aboutLightbox" id="aboutBtn" href="">Om sidan</a>
 
+    <!--start About Lightbox-->
 	<div id="aboutLightbox">
 		<p>Click to close</p> 
 		<div id="content">  
 			<p id="lightboxTxt"><?php include('about.php'); ?></p> 
 		</div>
 	</div>
+	<!--About Lightbox end-->
 
-</div><!--end topDiv-->
+</div>
+<!--end topDiv-->
+
 <?php include ('footer.php'); ?>
 
 </body>

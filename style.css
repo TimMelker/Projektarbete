@@ -56,7 +56,7 @@ body{
 
 ::-webkit-input-placeholder
 {
-	color: #9bcb3c;
+	color: white;
 }
 
 
@@ -101,7 +101,7 @@ body{
 #content
 {
 	color: black;
-	margin-top: 10%;
+	margin-top: 3%;
 	margin-right: auto;
 	margin-left: auto;
 	text-align: center;
@@ -125,6 +125,7 @@ body{
 
 #aboutUs
 {
+	overflow: auto;
 	margin-right: auto;
 	margin-left: auto;
 	width: 700px;
@@ -182,6 +183,7 @@ h2{
 
 #loginBtn{
 	margin-left: 120px;
+	width: 70px;
 }
 
 a{
@@ -221,7 +223,8 @@ a{
 
 #aboutBtn
 {
-	margin-right: 263px;
+	display: block;
+	width: 70px;
 }
 
 .darker{
