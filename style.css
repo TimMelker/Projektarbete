@@ -263,12 +263,28 @@ a{
 
  }
  #footern {
-position:absolute;
+position: relative;
+margin-top: 50px;
 width: 100%;
-height: 100px;
+height: 80px;
 border-top: 1px solid #9bcb3c;
 background-color: #ee3e74;
 color: #fff;
 
  }
+ #info {
+ 	background-color: #ee3e74;
+ 	padding: 15px;
+ 	border-radius: 5px;
+ 	width: 990px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	color: #fff;
+
+ }
+ #info p {
+text-align: justify;
+
+ }
+
  

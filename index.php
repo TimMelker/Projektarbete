@@ -11,11 +11,14 @@
 
 <body>
     <div id="logoDiv"><img src="images/logo.png" alt="StudentJobb" title="StudentJobb"/>  </div>
-<div id="topDiv">
-	<div id="info">
-		<h1>Information om oss</h1>
-		<p>Information om sidan skrivs här</p>
+    <div id="info">
+		<h1>StudentJobb</h1>
+		<p>Många studenter lever idag med att ha det svårt att få ekonomin att gå runt. Samtidigt har många företag små arbeten som behöver utföras men tiden saknas att utföra dessa.
+Det här förändras genom tjänsten StudentJobb genom att föra samman företagen med studenterna, där företagen kan få mindre jobb utförda snabbt och effektivt och studenten får en lättare vardag genom att få ekonomin att gå runt. Studenten får även en väg in till arbetsmarknaden genom nya kontakter och utförda arbeten de kan visa upp för framtida arbetsgivare.
+Genom tjänsten StudentJobb kan företag snabbt få sina mindre arbeten utförda utan krav på fler arbetsuppgifter och ges fler kontakter för framtida anställda.</p>
     </div><!--end info-->
+<div id="topDiv">
+	
     <div id="form">
 	    <form id="loginForm" name="loginForm" action="#" method="POST" class="loginForm">
 	    	<h2>Inlogg</h2>

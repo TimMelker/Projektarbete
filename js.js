@@ -1,4 +1,3 @@
-$(document).ready(function(){
 $('.lightbox_trigger').click(function(e){
 
 	e.preventDefault();
@@ -51,5 +50,4 @@ $('#aboutBtn').click(function(e){
 });
 	$('body').on('click', '#aboutLightbox', function(){
 		$('#aboutLightbox').fadeOut();
-});
 });
