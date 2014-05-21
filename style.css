@@ -101,7 +101,7 @@ body{
 #content
 {
 	color: black;
-	margin-top: 10%;
+	margin-top: 3%;
 	margin-right: auto;
 	margin-left: auto;
 	text-align: center;
@@ -221,7 +221,8 @@ a{
 
 #aboutBtn
 {
-	margin-right: 263px;
+	display: block;
+	width: 75px;
 }
 
 .darker{
@@ -283,6 +284,7 @@ z-index: -1;
  	padding: 15px;
  	border-radius: 5px;
  	width: 990px;
+ 
  	margin-left: auto;
  	margin-right: auto;
  	color: #fff;
