@@ -95,12 +95,10 @@ body{
 	text-align: justify;
 }
 
-<<<<<<< HEAD
 #aboutLightbox #content , #content p
-=======
+
 
 #content
->>>>>>> d3818306b00f688d161a46d282d83bd5b2e11c4e
 {
 	color: black;
 	margin-top: 10%;
@@ -110,13 +108,10 @@ body{
 	box-shadow: 0 0 25px white;
 	-webkit-box-shadow:0 0 25px white;
 	-moz-box-shadow:0 0 25px white;
-<<<<<<< HEAD
 	background-color: white;
 	max-width: 790px;
-=======
 	background-color: #fff;
 	max-width: 940px;
->>>>>>> d3818306b00f688d161a46d282d83bd5b2e11c4e
 }
 
 #lightbox #content{
