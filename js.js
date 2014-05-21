@@ -13,11 +13,9 @@ $('.lightbox_trigger').click(function(e){
 		var lightbox =
 		'<div id="lightbox">' + 
 			'<p>Click to close</p>' + 
-			'<div id="content">' + '<a href="#"><img src="images/cloudBusiness.png"/></a>' + '<a href="#"><img src="images/cloudStudent.png"/></a>' +
-				'<p id="lightboxTxt">TEXT HÄR!</p>' + 
+			'<div id="content">' + '<a href="#"><img src="images/cloudBusiness.png"/></a>' + '<a href="#"><img src="images/cloudStudent.png"/></a>' + 
 			'</div>' +
 		'</div>';
-
 		$('body').append(lightbox);
 		$('#lightbox').fadeIn();
 	}
