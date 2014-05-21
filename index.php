@@ -43,6 +43,14 @@ Genom tjänsten StudentJobb kan företag snabbt få sina mindre arbeten utförda
 		</form>
     </div><!--end form-->
     <a class="aboutLightbox" id="aboutBtn" href="">Om sidan</a>
+
+	<div id="aboutLightbox">
+		<p>Click to close</p> 
+		<div id="content">  
+			<p id="lightboxTxt"><?php include('about.php'); ?></p> 
+		</div>
+	</div>
+
 </div><!--end topDiv-->
 <?php include ('footer.php'); ?>
 

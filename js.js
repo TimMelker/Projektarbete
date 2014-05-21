@@ -30,11 +30,11 @@ $('#aboutBtn').click(function(e){
 
 
  
-	if ($('#aboutLightbox').length > 0) {
+	//if ($('#aboutLightbox').length > 0) {
 
 		$('#aboutLightbox').fadeIn();
-	}
-	else{
+	//}
+/*	else{
 		var lightbox =
 		'<div id="aboutLightbox">' + 
 			'<p>Click to close</p>' + 
@@ -46,7 +46,7 @@ $('#aboutBtn').click(function(e){
 		$('body').append(lightbox);
 		$('#aboutLightbox').fadeIn();
 	}
-
+*/
 });
 	$('body').on('click', '#aboutLightbox', function(){
 		$('#aboutLightbox').fadeOut();

@@ -270,6 +270,7 @@ height: 80px;
 border-top: 1px solid #9bcb3c;
 background-color: #ee3e74;
 color: #fff;
+z-index: -1;
 
  }
  #info {

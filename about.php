@@ -6,7 +6,6 @@
 	</head>
 	<body>
 		<div id="aboutUs">
-			<h1 id="aboutUsTop"><u>Om oss</u></h1>
 			<p id="aboutUsTxt">
 				Det är en vecka kvar tills studielånet kommer in på kontot och studenten Markus har redan använt alldeles för mycket pengar från sitt sparkonto den här månaden. Hur många gånger har han inte tänkt att han måste skaffa sig ett jobb vid sidan av studierna, och han har ägnat många kvällar åt att sitta och leta efter och söka jobb. Men eftersom studierna tar upp större delen av hans dagar känner han att ett jobb med ett bestämt antal timmar i veckan inte är att tänka på och det är inte många företag som vill anställa någon som inte har en färdig utbildning.
 				Samtidigt känner de anställda på ett företag som finns i samma stad som Markus befinner sig i att det inte kommer någonstans med sina arbeten och olika uppgifter då det hela tiden måste ägna sin tid åt att mindre arbeten inom företaget som egentligen inte alls har något att göra med de olika uppgifter de anställda har.<br/><br/>  
