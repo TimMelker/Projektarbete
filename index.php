@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>StudentJobb</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
@@ -9,14 +10,14 @@
 </head>
 
 <body>
-    <div id="logoDiv"><img src="images/logo.png"/>  </div>
+    <div id="logoDiv"><img src="images/logo.png" alt="StudentJobb"/>  </div>
 <div id="topDiv">
 	<div id="info">
 		<h1>Information om oss</h1>
 		<p>Information om sidan skrivs här</p>
     </div><!--end info-->
     <div id="form">
-	    <form id="loginForm" name"loginForm" action="" method="POST" class="loginForm">
+	    <form id="loginForm" name="loginForm" action="#" method="POST" class="loginForm">
 	    	<h2>Inlogg</h2>
 	    	<label>
 	    		<span>Användarnamn: </span>
