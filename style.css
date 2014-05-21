@@ -54,13 +54,13 @@ body{
 	background: #F13C73;
 }
 
-::-webkit-input-placeholder
+::-webkit-input-placeholder 
 {
-	color: white;
+	color: #fff;
 }
 ::-moz-placeholder
 {
-	color: white;
+	color: #fff;
 }
 
 
