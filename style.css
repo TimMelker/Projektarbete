@@ -90,11 +90,11 @@ body{
 
 #lightbox p{
 	text-align: right;
-	color: black;
+	color: #000000;
 	margin-right: 20px;
 	font-size: 12px;
 }
-#lightbox #lightboxTxt
+#lightboxTxt
 {
 	margin-top: 10%;
 	margin-right: auto;
@@ -175,6 +175,8 @@ a{
 	padding: 5px 5px 5px 5px;
 	border-radius: 3px 3px 3px 3px;
 	box-shadow: 5px 5px 2px black;
+	-moz-box-shadow: 5px 5px 2px black;
+	-webkit-box-shadow: 5px 5px 2px black;
 	color: white;
 }
 
@@ -185,6 +187,8 @@ a{
 	padding: 5px 5px 5px 5px;
 	border-radius: 3px 3px 3px 3px;
 	box-shadow: 5px 5px 2px black;
+	-moz-box-shadow: 5px 5px 2px black;
+	-webkit-box-shadow: 5px 5px 2px black;
 	color: white;
 }
 
@@ -230,3 +234,21 @@ a{
     z-index:1002;
     overflow: auto;
         }
+
+ #content img {
+ 	width: 200px;
+ 	height: auto;
+
+
+ }
+ #content a{
+	text-decoration: none;
+	background: none;
+	border: none;
+	padding: none;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+
+ }
+ 
