@@ -99,8 +99,6 @@ body{
 	text-align: justify;
 }
 
-#aboutLightbox #content , #content p
-
 
 #content
 {
@@ -158,7 +156,7 @@ body{
 #password{
 	 margin-top: 10px;
 }
-input{
+#password input , #userName input{
 	width: 185px;
 }
 
@@ -191,7 +189,11 @@ h2{
 	width: 70px;
 }
 
-a{
+#loginStatus{
+	width: 200px;
+}
+
+a , .loginForm input[type="submit"]{
 	border: 5px solid black;
 	background: black;
 	text-decoration: none;
@@ -203,16 +205,10 @@ a{
 	color: white;
 }
 
-#loginBtn , #reglerBtn{
-	border: 5px solid black;
-	background: black;
-	text-decoration: none;
-	padding: 5px 5px 5px 5px;
-	border-radius: 3px 3px 3px 3px;
-	box-shadow: 5px 5px 2px black;
-	-moz-box-shadow: 5px 5px 2px black;
-	-webkit-box-shadow: 5px 5px 2px black;
-	color: white;
+.loginForm input[type="submit"] {
+	width: 100px;
+	margin-left: 120px;
+	cursor: pointer;
 }
 
 #footerDiv{
@@ -229,7 +225,7 @@ a{
 #aboutBtn
 {
 	display: block;
-	width: 70px;
+	width: 80px;
 }
 
 .darker{

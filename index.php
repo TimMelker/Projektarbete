@@ -1,3 +1,52 @@
+<?php
+// show potential errors / feedback (from login object)
+if (isset($login)) {
+    if ($login->errors) {
+        foreach ($login->errors as $error) {
+            echo $error;
+        }
+    }
+    if ($login->messages) {
+        foreach ($login->messages as $message) {
+            echo $message;
+        }
+    }
+}
+
+if (version_compare(PHP_VERSION, '5.3.7', '<')) {
+    exit("Sorry, Simple PHP Login does not run on a PHP version smaller than 5.3.7 !");
+} else if (version_compare(PHP_VERSION, '5.5.0', '<')) {
+    // if you are using PHP 5.3 or PHP 5.4 you have to include the password_api_compatibility_library.php
+    // (this library adds the PHP 5.5 password hashing functions to older versions of PHP)
+    require_once("libraries/password_compatibility_library.php");
+}
+
+// include the configs / constants for the database connection
+require_once("login/config/db.php");
+
+// load the login class
+require_once("login/classes/Login.php");
+
+// create a login object. when this object is created, it will do all login/logout stuff automatically
+// so this single line handles the entire login process. in consequence, you can simply ...
+$login = new Login();
+
+// ... ask if we are logged in here:
+if ($login->isUserLoggedIn() == true) {
+    // the user is logged in. you can do whatever you want here.
+    // for demonstration purposes, we simply show the "you are logged in" view.
+    include($_SERVER['DOCUMENT_ROOT'] . "github/projektarbete/login/views/logged_in.php");
+
+} /*else {
+    // the user is not logged in. you can do whatever you want here.
+    // for demonstration purposes, we simply show the "you are not logged in" view.
+    include("login/views/not_logged_in.php");
+}*/
+
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,24 +75,32 @@ Genom tjänsten StudentJobb kan företag snabbt få sina mindre arbeten utförda
 	
 	<!--start Form-->
     <div id="form">
-	    <form id="loginForm" name="loginForm" action="" method="POST" class="loginForm">
+    	    <form id="loginForm" name="loginForm" action="index.php" method="POST" class="loginForm">
 	    	<h2>Inlogg</h2>
 	    	<label>
 	    		<span>Användarnamn: </span>
-	    		<input id="userName" type="text" name="userName" placeholder="Ditt användarnamn" /><br>
+	    		<input id="userName" type="text" name="user_name" placeholder="Ditt användarnamn" required /><br>
 	    	</label>
 
 	    	<label id="passwordLabel">	    		
 	    		<span id="passSpan">Lösenord: </span>
-	    		<input id="password" type="password" name="password" placeholder="Ditt lösenord" /><br>
+	    		<input id="password" type="password" name="user_password" placeholder="Ditt lösenord" autocomplete="off" required /><br>
 	    	</label>
+
+            <div id="loginStatus">
+                <?php require_once($_SERVER['DOCUMENT_ROOT'] . "github/projektarbete/login/classes/Login.php");
+                    echo implode(" ", $login->errors);
+                ?>
+            </div>
 
 	    	<label id="btnLabel">
 	    		<a class="lightbox_trigger" href="#">Registrera</a>
 	    	</label>
 	    	<label>
-	    		<a href="login.php" id="loginBtn">Logga In</a>
+	    		<input type="submit" name="login" value="Log In" />
+	    		<!--<a href="login/index.php" onclick="document.forms['loginForm'].submit();" id="loginBtn">Logga In</a>-->
 	    	</label>
+
 		</form>
     </div>
     <!--end form-->
