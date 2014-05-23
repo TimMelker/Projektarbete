@@ -300,5 +300,29 @@ z-index: -1;
 text-align: justify;
 
  }
-
+/*Design for User.php*/
+ #userContainer {
+ 	width: 990px;
+ 	height: 500px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	background-color: #ee3e74;
+ }
+ #profileImage {
+ 	width: 250px;
+ 	height: 300px;
+ 	float: left;
+ 	margin: 50px;
+ 	background-color: #fff;
+ 	border-radius: 10px;
+ 	display: inline-block;
+ }
+ #userInfo{
+ 	width: 600px;
+ 	height: auto;
+ 	background-color: #fff;
+ 	display: inline-block;
+ 	margin-top: 50px;
+ 	border-radius: 10px;
+ }
  
