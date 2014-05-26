@@ -9,10 +9,11 @@
 			</div>
 			<div id="userInfo"><!--Samtliga fält från databasen skall in-->
 
-				<button>Spara</button>
+				
 
 
 			</div>
+			<button>Spara</button>
 		</div>
 	</body>
 </html>

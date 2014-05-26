@@ -9,10 +9,11 @@
 			</div>
 			<div id="userInfo"><!--Samtliga fält från databasen skall in-->
 
-				<button title="Redigera" name="Redigera" onclick="window.location.href='editUser.php'">Redigera</button>
+				
 
 
 			</div>
+			<button title="Redigera" name="Redigera" onclick="window.location.href='editUser.php'">Redigera</button>
 		</div>
 	</body>
 </html>
