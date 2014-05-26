@@ -35,7 +35,8 @@ $login = new Login();
 if ($login->isUserLoggedIn() == true) {
     // the user is logged in. you can do whatever you want here.
     // for demonstration purposes, we simply show the "you are logged in" view.
-    include($_SERVER['DOCUMENT_ROOT'] . "github/projektarbete/login/views/logged_in.php");
+    header("Location: User.php");
+    //include($_SERVER['DOCUMENT_ROOT'] . "github/projektarbete/login/views/logged_in.php");
 
 } /*else {
     // the user is not logged in. you can do whatever you want here.

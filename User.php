@@ -1,3 +1,8 @@
+<?php 
+session_start();
+include($_SERVER['DOCUMENT_ROOT'] . "github/projektarbete/login/views/logged_in.php");
+?>
+
 <DOCTYPE! html>
 <html>
 <head>
