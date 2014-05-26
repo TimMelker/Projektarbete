@@ -13,7 +13,7 @@
 
 
 			</div>
-			<button>Spara</button>
+			<button onclick="window.location.href='User.php'">Spara</button>
 		</div>
 	</body>
 </html>

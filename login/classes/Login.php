@@ -67,24 +67,28 @@ class Login
 
                 // database query, getting all the info of the selected user (allows login via email address in the
                 // username field)
-                $sql = "SELECT business_name, email, password
-                        FROM business
-                        WHERE business_name = '" . $user_name . "' OR email = '" . $user_name . "';";
-                $result_of_login_check = $this->db_connection->query($sql);
+                $sqlBusiness = "SELECT business_name, email, password
+                                FROM business
+                                WHERE business_name = '" . $user_name . "' OR email = '" . $user_name . "';";
+                $sqlStudent =   "SELECT student_name, email, password
+                                FROM student
+                                WHERE student_name = '" . $user_name . "' OR email = '" . $user_name . "';";
+                $result_of_loginBusiness_check = $this->db_connection->query($sqlBusiness);
+                $result_of_loginStudent_check = $this->db_connection->query($sqlStudent);
 
                 // if this user exists
-                if ($result_of_login_check->num_rows == 1) {
+                if ($result_of_loginBusiness_check->num_rows == 1) {
 
                     // get result row (as an object)
-                    $result_row = $result_of_login_check->fetch_object();
+                    $result_row_business = $result_of_loginBusiness_check->fetch_object();
 
                     // using PHP 5.5's password_verify() function to check if the provided password fits
                     // the hash of that user's password
-                    if (password_verify($_POST['user_password'], $result_row->password)) {
+                    if (password_verify($_POST['user_password'], $result_row_business->password)) {
 
                         // write user data into PHP SESSION (a file on your server)
-                        $_SESSION['user_name'] = $result_row->business_name;
-                        $_SESSION['user_email'] = $result_row->email;
+                        $_SESSION['user_name'] = $result_row_business->business_name;
+                        $_SESSION['user_email'] = $result_row_business->email;
                         $_SESSION['user_login_status'] = 1;
 
                     } else {
@@ -93,7 +97,26 @@ class Login
                 } else {
                     $this->errors[] = "This user does not exist.";
                 }
-            } else {
+                if($result_of_loginStudent_check->num_rows == 1){
+
+                    $result_row_student = $result_of_loginStudent_check->fetch_object();
+
+                    if(password_verify($_POST['user_password'], $result_row_student->password)){
+
+                    $_SESSION['user_name'] = $result_row_student->student_name;
+                    $_SESSION['user_email'] = $result_row_student->email;
+                    $_SESSION['user_login_status'] = 1;
+
+                    } else {
+                        $this->errors[] = "Wrong password. Try again.";
+                    }
+
+                } else {
+                    $this->errors[] = "This user does not exist.";
+                }
+
+            }  
+            else {
                 $this->errors[] = "Database connection problem.";
             }
         }

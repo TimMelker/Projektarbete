@@ -4,7 +4,7 @@
  * Class registration
  * handles the user registration
  */
-class Registration
+class RegistrationStudent
 {
     /**
      * @var object $db_connection The database connection
@@ -36,34 +36,34 @@ class Registration
      */
     private function registerNewUser()
     {
-        if (empty($_POST['business_name'])) {
+        if (empty($_POST['student_name'])) {
             $this->errors[] = "Empty Username";
-        } elseif (empty($_POST['business_password_new']) || empty($_POST['business_password_repeat'])) {
+        } elseif (empty($_POST['student_password_new']) || empty($_POST['student_password_repeat'])) {
             $this->errors[] = "Empty Password";
-        } elseif ($_POST['business_password_new'] !== $_POST['business_password_repeat']) {
+        } elseif ($_POST['student_password_new'] !== $_POST['student_password_repeat']) {
             $this->errors[] = "Password and password repeat are not the same";
-        } elseif (strlen($_POST['business_password_new']) < 6) {
+        } elseif (strlen($_POST['student_password_new']) < 6) {
             $this->errors[] = "Password has a minimum length of 6 characters";
-        } elseif (strlen($_POST['business_name']) > 64 || strlen($_POST['business_name']) < 2) {
+        } elseif (strlen($_POST['student_name']) > 64 || strlen($_POST['student_name']) < 2) {
             $this->errors[] = "Username cannot be shorter than 2 or longer than 64 characters";
-        } elseif (!preg_match('/^[a-z\d]{2,64}$/i', $_POST['business_name'])) {
+        } elseif (!preg_match('/^[a-z\d]{2,64}$/i', $_POST['student_name'])) {
             $this->errors[] = "Username does not fit the name scheme: only a-Z and numbers are allowed, 2 to 64 characters";
-        } elseif (empty($_POST['business_email'])) {
+        } elseif (empty($_POST['student_email'])) {
             $this->errors[] = "Email cannot be empty";
-        } elseif (strlen($_POST['business_email']) > 64) {
+        } elseif (strlen($_POST['student_email']) > 64) {
             $this->errors[] = "Email cannot be longer than 64 characters";
-        } elseif (!filter_var($_POST['business_email'], FILTER_VALIDATE_EMAIL)) {
+        } elseif (!filter_var($_POST['student_email'], FILTER_VALIDATE_EMAIL)) {
             $this->errors[] = "Your email address is not in a valid email format";
-        } elseif (!empty($_POST['business_name'])
-            && strlen($_POST['business_name']) <= 64
-            && strlen($_POST['business_name']) >= 2
-            && preg_match('/^[a-z\d]{2,64}$/i', $_POST['business_name'])
-            && !empty($_POST['business_email'])
-            && strlen($_POST['business_email']) <= 64
-            && filter_var($_POST['business_email'], FILTER_VALIDATE_EMAIL)
-            && !empty($_POST['business_password_new'])
-            && !empty($_POST['business_password_repeat'])
-            && ($_POST['business_password_new'] === $_POST['business_password_repeat'])
+        } elseif (!empty($_POST['student_name'])
+            && strlen($_POST['student_name']) <= 64
+            && strlen($_POST['student_name']) >= 2
+            && preg_match('/^[a-z\d]{2,64}$/i', $_POST['student_name'])
+            && !empty($_POST['student_email'])
+            && strlen($_POST['student_email']) <= 64
+            && filter_var($_POST['student_email'], FILTER_VALIDATE_EMAIL)
+            && !empty($_POST['student_password_new'])
+            && !empty($_POST['student_password_repeat'])
+            && ($_POST['student_password_new'] === $_POST['student_password_repeat'])
         ) {
             // create a database connection
             $this->db_connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
@@ -77,30 +77,30 @@ class Registration
             if (!$this->db_connection->connect_errno) {
 
                 // escaping, additionally removing everything that could be (html/javascript-) code
-                $business_name = $this->db_connection->real_escape_string(strip_tags($_POST['business_name'], ENT_QUOTES));
-                $business_email = $this->db_connection->real_escape_string(strip_tags($_POST['business_email'], ENT_QUOTES));
+                $student_name = $this->db_connection->real_escape_string(strip_tags($_POST['student_name'], ENT_QUOTES));
+                $student_email = $this->db_connection->real_escape_string(strip_tags($_POST['student_email'], ENT_QUOTES));
 
-                $business_password = $_POST['business_password_new'];
+                $student_password = $_POST['student_password_new'];
 
                 // crypt the user's password with PHP 5.5's password_hash() function, results in a 60 character
                 // hash string. the PASSWORD_DEFAULT constant is defined by the PHP 5.5, or if you are using
                 // PHP 5.3/5.4, by the password hashing compatibility library
-                $business_password_hash = password_hash($business_password, PASSWORD_DEFAULT);
+                $student_password_hash = password_hash($student_password, PASSWORD_DEFAULT);
 
                 // check if user or email address already exists
-                $sql = "SELECT * FROM business WHERE business_name = '" . $business_name . "' OR email = '" . $business_email . "';";
-                $query_check_business_name = $this->db_connection->query($sql);
+                $sql = "SELECT * FROM student WHERE student_name = '" . $student_name . "' OR email = '" . $student_email . "';";
+                $query_check_student_name = $this->db_connection->query($sql);
 
-                if ($query_check_business_name->num_rows == 1) {
+                if ($query_check_student_name->num_rows == 1) {
                     $this->errors[] = "Sorry, that username / email address is already taken.";
                 } else {
                     // write new user's data into database
-                    $sql = "INSERT INTO business (business_name, password, email)
-                            VALUES('" . $business_name . "', '" . $business_password_hash . "', '" . $business_email . "');";
-                    $query_new_business_insert = $this->db_connection->query($sql);
+                    $sql = "INSERT INTO student (student_name, password, email)
+                            VALUES('" . $student_name . "', '" . $student_password_hash . "', '" . $student_email . "');";
+                    $query_new_student_insert = $this->db_connection->query($sql);
 
                     // if user has been added successfully
-                    if ($query_new_business_insert) {
+                    if ($query_new_student_insert) {
                         $this->messages[] = "Your account has been created successfully. You can now log in.";
                     } else {
                         $this->errors[] = "Sorry, your registration failed. Please go back and try again.";
