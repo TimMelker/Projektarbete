@@ -9,11 +9,14 @@ include($_SERVER['DOCUMENT_ROOT'] . "github/projektarbete/login/views/logged_in.
 <DOCTYPE! html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<title><?php echo $_SESSION['user_name']; ?>'s profil </title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
 		<div id="userContainer">
-			<div id="profileImage"><!--Lägg in bild från databasen-->
+			<h3 id="userHeader">Välkommen <?php echo $_SESSION['user_name']; ?> </h3>
+			<div id="profileImage">
 			</div>
 			<div id="userInfo"><!--Samtliga fält från databasen skall in-->
 

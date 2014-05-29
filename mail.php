@@ -1,25 +1,4 @@
-<?php 
-
-$connect = mysqli_connect('localhost' , 'root' , 'test123' , 'studentjobb') or die ("Could not connect to the database!");
-$db = mysqli_select_db($connect, 'studentjobb') or die ("No database");
-
-
-if(mysqli_connect_errno())
-{
-    printf("Connection failed: %s\n");
-    exit();
-}
-
-if(mysqli_ping($connect))
-{
-    printf("Our connection is ok!\n");
-}
-else{
-    printf("Error: %s\n", mysqli_error($connect));
-}
-
-
-mysqli_close($connect);
+<?php include('include/models/db_connect.php');
 
 ?>
 <!DOCTYPE html>
@@ -35,26 +14,30 @@ mysqli_close($connect);
 
 <body>
 
-
+<div id="Container">
+    <div id="apply">
 <form name="ansok" method="post" action="skickat.php">
-Titel<br>
-<input name="name" type="text" size="30">
+Titel<br> <?php 
+
+?> <!--ska in med ads advert_id titel-->
+<input name="name" type="text" size="35">
 <br> <!--Hämta annonsens ämen från DB-->
 Företagsmail:<br>
-<input name="subject" type="text" size="30">
+<input name="subject" type="text" size="35">
 
 <br>
 Personligt meddelande:<br>
-<textarea name="message" cols="30" rows="5"></textarea>
-<br>
+<textarea name="message" cols="35" rows="20"></textarea>
+
 <br>
 Email:<br>
-<input name="email" type="text" size="30">
+<input name="email" type="text" size="35">
+<br>
 <br>
 <input name="submit" type="submit"
 value="Skicka meddelandet">
 </form>
-
+</div>
 </div>
 </body>
 </html>
