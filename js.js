@@ -30,23 +30,8 @@ $('#aboutBtn').click(function(e){
 
 
  
-	//if ($('#aboutLightbox').length > 0) {
 
 		$('#aboutLightbox').fadeIn();
-	//}
-/*	else{
-		var lightbox =
-		'<div id="aboutLightbox">' + 
-			'<p>Click to close</p>' + 
-			'<div id="content">' +  
-				'<p id="lightboxTxt"></p>' + 
-			'</div>' +
-		'</div>';
-
-		$('body').append(lightbox);
-		$('#aboutLightbox').fadeIn();
-	}
-*/
 });
 	$('body').on('click', '#aboutLightbox', function(){
 		$('#aboutLightbox').fadeOut();

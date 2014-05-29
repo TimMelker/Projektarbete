@@ -14,14 +14,14 @@ if(empty($_POST['ad_title'])){
 $db_connection = mysqli_connect('localhost' , 'root' , 'test123' , 'studentjobb');
 $db_select = mysqli_select_db($db_connection, 'studentjobb');
 
-    if (!$db_connection->set_charset("utf8")) {
+    if (!mysqli_set_charset($db_connection, "utf-8")) {
         $errors[] = $db_connection->error;
     }
 
  if (!$db_connection->connect_errno) {
  	if(isset($_POST['ad_title']) && isset($_POST['ad_text'])){
- 	$ad_title = $_POST['ad_title'];
- 	$ad_text = $_POST['ad_text'];
+ 	$ad_title = mysqli_real_escape_string($db_connection, $_POST['ad_title']);
+ 	$ad_text = mysqli_real_escape_string($db_connection, $_POST['ad_text']);
  	$ad_id = $_SESSION['user_id'];
 
 

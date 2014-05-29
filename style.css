@@ -47,7 +47,7 @@ body{
 	background-color: #8CCBE7;
 }
 
-#userName , #password
+#userName , #password , #userEmail , #regPassword , #regUserName , #regUserEmail
 {
 	color: #fff;
 	font-size: 18px;
@@ -103,7 +103,6 @@ body{
 #aboutLightbox #content
 {
 	color: #fff;
-	margin-top: 3%;
 	margin-right: auto;
 	margin-left: auto;
 	text-align: center;
@@ -111,7 +110,6 @@ body{
 	-webkit-box-shadow:0 0 25px white;
 	-moz-box-shadow:0 0 25px white;
 	background-color: ##ee3e74;
-	max-width: 790px;
 	background-color: #ee3e74;
 	max-width: 940px;
 	border-radius: 15px;
@@ -150,6 +148,42 @@ body{
 	margin-top: 50px;
 }
 
+#info{
+ 	background-color: #ee3e74;
+ 	padding: 15px;
+ 	border-radius: 5px;
+ 	width: 990px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	color: #fff;
+
+ }
+
+ #info p {
+text-align: justify;
+
+ }
+
+ #regDiv{
+ 	padding: 15px;
+ 	border-radius: 5px;
+ 	width: 600px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	border: 2px solid #F13C73;
+ }
+
+ .regForm{
+ 	margin-left: 150px;
+ 	margin-bottom: 50px;
+ 	font-size: 18px;
+ }
+
+ #regFormBtn{
+ 	font-size: 17px;
+ 	width: 280px;
+ }
+
 #form{
 	margin-top: 50px;
 }
@@ -157,8 +191,9 @@ body{
 #password{
 	 margin-top: 10px;
 }
-#password input , #userName input{
-	width: 185px;
+
+#password , #userName , #regPassword , #regUserName , #regUserEmail{
+	width: 280px;
 }
 
 #passSpan{
@@ -194,16 +229,22 @@ h2{
 	width: 200px;
 }
 
-a , .loginForm input[type="submit"]{
-	border: 5px solid black;
-	background: black;
+a , .loginForm input[type="submit"] , .regForm input[type="submit"]{
+	border: 5px solid #98D0E9;
+	background: #98D0E9;
 	text-decoration: none;
 	padding: 5px 5px 5px 5px;
 	border-radius: 3px 3px 3px 3px;
-	box-shadow: 5px 5px 2px black;
-	-moz-box-shadow: 5px 5px 2px black;
-	-webkit-box-shadow: 5px 5px 2px black;
+	box-shadow: 5px 5px 2px #749DAF;
+	-moz-box-shadow: 5px 5px 2px #6592A6;
+	-webkit-box-shadow: 5px 5px 2px #6592A6;
 	color: white;
+	font-family: verdana;
+}
+
+#backLink{
+	margin-left: 210px;
+	margin-right: auto;
 }
 
 #login_status{
@@ -216,11 +257,16 @@ a , .loginForm input[type="submit"]{
 	border-right-width: 60px;
 }
 
-.loginForm input[type="submit"] {
+.loginForm input[type="submit"] , .regForm input[type="submit"] {
 	width: 100px;
-	margin-left: 120px;
+	margin-left: 85px;
 	cursor: pointer;
 }
+
+.regForm input[type="submit"]{
+	margin-left: 0;
+}
+
 
 #footerDiv{
 	width: 350px;
@@ -266,12 +312,27 @@ a , .loginForm input[type="submit"]{
     overflow: auto;
         }
 
+#regComplete{
+	position: absolute;
+	margin-left: 30%;
+	margin-top: 500px;
+	font-family: helvetica;
+	font-size: 30px;
+	font-weight: 700;
+}
+
  #content img {
  	width: 200px;
  	height: auto;
-
-
  }
+
+#content p{
+	color: #fff;
+	font-size: 15px;
+	line-height: 30px;
+	font-family: verdana;
+}
+
  #content a{
 	text-decoration: none;
 	background: none;
@@ -293,20 +354,7 @@ color: #fff;
 z-index: -1;
 
  }
- #info {
- 	background-color: #ee3e74;
- 	padding: 15px;
- 	border-radius: 5px;
- 	width: 990px;
- 	margin-left: auto;
- 	margin-right: auto;
- 	color: #fff;
-
- }
- #info p {
-text-align: justify;
-
- }
+ 
 /*Design for User.php*/
  #userContainer {
  	width: 990px;
