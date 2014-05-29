@@ -389,11 +389,25 @@ z-index: -1;
  	padding: 50px;
  	text-align: center;
  	background-color: #ee3e74;
- 	border: 1px solid #9bcb3c;
+
  }
 #userHeader {
 	text-align: center;
 	font-size: 25px;
 	
 
+}
+
+#mailP{
+	padding-top: 40px;
+}
+
+#adsList{
+	border: 2px solid #fff;
+	margin-top: 20px;
+	width: 1000px;
+	height: auto;
+	padding-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
 }
