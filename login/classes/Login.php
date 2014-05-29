@@ -67,10 +67,10 @@ class Login
 
                 // database query, getting all the info of the selected user (allows login via email address in the
                 // username field)
-                $sqlBusiness = "SELECT business_name, email, password
+                $sqlBusiness = "SELECT business_name, email, password, business_id
                                 FROM business
                                 WHERE business_name = '" . $user_name . "' OR email = '" . $user_name . "';";
-                $sqlStudent =   "SELECT student_name, email, password
+                $sqlStudent =   "SELECT student_name, email, password, role
                                 FROM student
                                 WHERE student_name = '" . $user_name . "' OR email = '" . $user_name . "';";
                 $result_of_loginBusiness_check = $this->db_connection->query($sqlBusiness);
@@ -89,15 +89,15 @@ class Login
                         // write user data into PHP SESSION (a file on your server)
                         $_SESSION['user_name'] = $result_row_business->business_name;
                         $_SESSION['user_email'] = $result_row_business->email;
+                        $_SESSION['user_id'] = $result_row_business->business_id;
                         $_SESSION['user_login_status'] = 1;
+                        $_SESSION['isBusiness'] = 1;
 
                     } else {
                         $this->errors[] = "Wrong password. Try again.";
                     }
-                } else {
-                    $this->errors[] = "This user does not exist.";
-                }
-                if($result_of_loginStudent_check->num_rows == 1){
+                } 
+                elseif($result_of_loginStudent_check->num_rows == 1){
 
                     $result_row_student = $result_of_loginStudent_check->fetch_object();
 
@@ -106,6 +106,7 @@ class Login
                     $_SESSION['user_name'] = $result_row_student->student_name;
                     $_SESSION['user_email'] = $result_row_student->email;
                     $_SESSION['user_login_status'] = 1;
+                    $_SESSION['role'] = $result_row_student->role;
 
                     } else {
                         $this->errors[] = "Wrong password. Try again.";
@@ -120,6 +121,23 @@ class Login
                 $this->errors[] = "Database connection problem.";
             }
         }
+    }
+
+    public function isUserAdmin()
+    {
+        if(isset($_SESSION['role']) AND $_SESSION['role'] == 1) {
+            return true;
+        }
+        //default return
+        return false;
+    }
+
+    public function isUserBusiness()
+    {
+        if(isset($_SESSION['isBusiness']) AND $_SESSION['isBusiness'] == 1){
+            return true;
+        }
+        return false;
     }
 
     /**

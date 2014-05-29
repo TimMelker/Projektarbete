@@ -10,15 +10,4 @@ if(mysqli_connect_errno())
 	exit();
 }
 
-if(mysqli_ping($connect))
-{
-	printf("Our connection is ok!\n");
-}
-else{
-	printf("Error: %s\n", mysqli_error($connect));
-}
-
-
-mysqli_close($connect);
-
 ?>

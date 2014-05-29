@@ -31,14 +31,23 @@ require_once("login/classes/Login.php");
 // create a login object. when this object is created, it will do all login/logout stuff automatically
 // so this single line handles the entire login process. in consequence, you can simply ...
 $login = new Login();
+
 //$loginStudent = new LoginStudent();
 
 // ... ask if we are logged in here:
 if ($login->isUserLoggedIn() == true) {
+    if($login->isUserAdmin() == true){
+        header("Location: admin.php");
+    }
+    elseif($login->isUserBusiness() == true){
     // the user is logged in. you can do whatever you want here.
     // for demonstration purposes, we simply show the "you are logged in" view.
-    header("Location: User.php");
+    header("Location: User_business.php");
     //include($_SERVER['DOCUMENT_ROOT'] . "github/projektarbete/login/views/logged_in.php");
+    }
+    else{
+        header("Location: User.php");
+    }
 
 } /*else {
     // the user is not logged in. you can do whatever you want here.
