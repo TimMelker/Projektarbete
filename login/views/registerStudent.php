@@ -6,7 +6,7 @@
     </head>
     <body>
         <div id="logoDiv"><img src="../images/cloudStudent.png" alt="business" title="business"/>  </div>
-        <h1 style="padding-bottom: 10px; margin-top: 10px;">Registrera Ditt Företag</h1>
+        <h1 style="padding-bottom: 10px; margin-top: 10px;">Registrera Dig</h1>
             <div id="regComplete"><?php
         // show potential errors / feedback (from registration object)
         if (isset($registration)) {
