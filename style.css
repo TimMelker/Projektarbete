@@ -411,3 +411,24 @@ z-index: -1;
 	margin-left: auto;
 	margin-right: auto;
 }
+
+#advert_container{
+	border: 2px solid white;
+	min-height: 400px;
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+}
+
+#annonsText{
+	white-space: pre;
+	margin-left: 210px;
+	border: 1px solid;
+}
+
+#advertInfo{
+	width: 900px;
+	margin-right: auto;
+	margin-left: 150px;
+}

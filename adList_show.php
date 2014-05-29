@@ -8,8 +8,9 @@
 			<meta charset="utf-8" />
 		</head>
 		<body>
+		<div id="topDiv" style="width: 1500px;">
 			<div id="adsList">
-			<h1 style="margin-top: 20px;">Annonser</h1>
+			<h1 style="margin-top: 20px; margin-top: 20px;font-size: 35px;font-variant: small-caps;">Annonser</h1>
 				<?php 
 
 				foreach (fetch_ads() as $ad){
@@ -22,5 +23,9 @@
 						}
 					?>
 			</div>
+			<div>
+				<a style="margin-left: 300px;position: absolute;margin-top: 10px; " href="User.php">Tillbaka till profil</a>
+			</div>
+		</div>
 		</body>
 	</html>

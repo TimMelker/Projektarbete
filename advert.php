@@ -17,6 +17,7 @@ $ad_info = fetch_ad_info($_GET['id']);
 		<title></title>
 	</head>
 	<body>
+	<div id="topDiv" style="width: 1500px;">
 		<div id="advert_container">
 			<?php
 
@@ -24,16 +25,25 @@ $ad_info = fetch_ad_info($_GET['id']);
 				echo 'Den annonsen finns inte!';
 			} else{
 				?>
-				<h1><?php echo $ad_info['title']; ?></h1>
-				<p>Advert ID: <?php echo $ad_info['id']; ?></p>
-				<p>Annons info: <?php echo $ad_info['description']; ?></p>
-				<p>Företagets namn: <?php echo $ad_info['business_name']; ?></p>
+				<div id="profileImage">
+				</div>
+				<div id="advertInfo">
+				<h1 style="font-size: 40px; text-decoration: underline;"><?php echo $ad_info['title']; ?></h1><br>
+				<h2 style="font-size: 30px; text-decoration: underline;"><?php echo $ad_info['business_name']; ?></h2>
+				<p style="text-decoration: underline;">Annons ID: <?php echo $ad_info['id']; ?></p><br>
+				<p id="annonsText" style="white-space: pre;"><?php echo $ad_info['description']; ?></p>
 				<p></p>
 				<?php
 			}
 				?>
-				<button id="replyBtn" title="svara" name="svara" onclick="myCall()">Svara på annons!</button>
+				</div>
 		</div>
-		<div id="email_container"></div>
+		<br>
+		<br>
+		<div style="width: 1180px; margin-left: auto; margin-right: auto;">
+		<a href="adList_show.php" >Tillbaka till annonser</a>
+		<a href="#" style="float: right;" id="replyBtn" title="svara" name="svara" onclick="myCall()">Svara på annons!</a>
+		</div>
+	</div>
 	</body>
 </html>

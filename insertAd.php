@@ -11,7 +11,7 @@
 		</form>
 		</br>
 		<h1 style="float: left;">Annons text</h1>
-		<textarea cols="50" rows="30"  name="ad_text" form="createAd" placeholder="Skriv in din annonstext här!" required ></textarea>
+		<textarea style="white-space: pre;" cols="50" rows="30"  name="ad_text" form="createAd" placeholder="Skriv in din annonstext här!" required ></textarea>
 		<input form="createAd" id="insertAd_btn" type="submit" name="insertAd" value="Lägg in annons"/>
 	</body>
 </html>
