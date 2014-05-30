@@ -17,18 +17,26 @@ $db_select = mysqli_select_db($db_connection, 'studentjobb');
     }
 
  if (!$db_connection->connect_errno) {
- 	if(isset($_POST['ad_title']) && isset($_POST['ad_text'])){
- 	$ad_title = mysqli_real_escape_string($db_connection, $_POST['ad_title']);
- 	$ad_text = mysqli_real_escape_string($db_connection, $_POST['ad_text']);
+ 	if(isset($_POST['student_name']) && isset($_POST['email'])&& isset($_POST['phone'])&& isset($_POST['university'])
+ 		&& isset($_POST['cv'])&& isset($_POST['presentation'])&& isset($_POST['degree'])&& isset($_POST['other_degree'])){
+ 	$student_name = mysqli_real_escape_string($db_connection, $_POST['student_name']);
+ 	$phone = mysqli_real_escape_string($db_connection, $_POST['phone']);
+ 	$university = mysqli_real_escape_string($db_connection, $_POST['university']);
+ 	$cv = mysqli_real_escape_string($db_connection, $_POST['cv']);
+ 	$presentation = mysqli_real_escape_string($db_connection, $_POST['presentation']);
+ 	$degree = mysqli_real_escape_string($db_connection, $_POST['degree']);
+ 	$other_degree = mysqli_real_escape_string($db_connection, $_POST['other_degree']);
+ 	
  	$ad_id = $_SESSION['user_id'];
 
 
- 	$sql = "INSERT INTO ads (title, description, business_id) VALUES ('$ad_title', '$ad_text', '$ad_id')";
+ 	$sql = "INSERT INTO student (student_name, email, phone, university, cv, presentation, degree, other_degree) 
+ 	VALUES ('$student_name', '$email', '$phone', '$university', '$cv', '$presentation', '$degree',  '$other_degree')";
  	$query_check_insert = mysqli_query($db_connection, $sql);
  	if($query_check_insert){
- 		$messages[] = "Din annons lades till!";
+ 		$messages[] = "Du har uppdaterat din profil!";
  	} else {
- 		$messages[] = "Fel vid inlägg!";
+ 		$messages[] = "Fel vid uppdatering!";
  	}
  }
 }
