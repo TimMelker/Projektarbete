@@ -37,23 +37,23 @@ class RegistrationBusiness
     private function registerNewUser()
     {
         if (empty($_POST['business_name'])) {
-            $this->errors[] = "Empty Username";
+            $this->errors[] = "Inget lösenord";
         } elseif (empty($_POST['business_password_new']) || empty($_POST['business_password_repeat'])) {
-            $this->errors[] = "Empty Password";
+            $this->errors[] = "Inget lösenord";
         } elseif ($_POST['business_password_new'] !== $_POST['business_password_repeat']) {
-            $this->errors[] = "Password and password repeat are not the same";
+            $this->errors[] = "Lösenord och repetera lösenord är inte likadana";
         } elseif (strlen($_POST['business_password_new']) < 6) {
-            $this->errors[] = "Password has a minimum length of 6 characters";
+            $this->errors[] = "Lösenordet måste vara minst 6 tecken";
         } elseif (strlen($_POST['business_name']) > 64 || strlen($_POST['business_name']) < 2) {
-            $this->errors[] = "Username cannot be shorter than 2 or longer than 64 characters";
+            $this->errors[] = "Användarnamnet kan inte vara kortare än 2 eller längre än 64 tecken.";
         } elseif (!preg_match('/^[a-z\s-]{2,64}$/i', $_POST['business_name'])) {
-            $this->errors[] = "Username does not fit the name scheme: only a-Z and numbers are allowed, 2 to 64 characters";
+            $this->errors[] = "Användarnamne matchar inte mönstret: bara a-Ö och siffror är tillåtna, 2 till 64 tecken.";
         } elseif (empty($_POST['business_email'])) {
-            $this->errors[] = "Email cannot be empty";
+            $this->errors[] = "Email kan inte vara tom.";
         } elseif (strlen($_POST['business_email']) > 64) {
-            $this->errors[] = "Email cannot be longer than 64 characters";
+            $this->errors[] = "Email kan inte vara längre än 64 tecken.";
         } elseif (!filter_var($_POST['business_email'], FILTER_VALIDATE_EMAIL)) {
-            $this->errors[] = "Your email address is not in a valid email format";
+            $this->errors[] = "Din email är inte i ett godkänt format.";
         } elseif (!empty($_POST['business_name'])
             && strlen($_POST['business_name']) <= 64
             && strlen($_POST['business_name']) >= 2
@@ -101,16 +101,16 @@ class RegistrationBusiness
 
                     // if user has been added successfully
                     if ($query_new_business_insert) {
-                        $this->messages[] = "Your account has been created successfully. You can now log in.";
+                        $this->messages[] = "Ditt konto har skapats! Du kan nu logga in.";
                     } else {
-                        $this->errors[] = "Sorry, your registration failed. Please go back and try again.";
+                        $this->errors[] = "Ledsen, men registreringen misslyckades. Var vänlig att gå tillbaka och försök igen.";
                     }
                 }
             } else {
-                $this->errors[] = "Sorry, no database connection.";
+                $this->errors[] = "Ingen databasanslutning.";
             }
         } else {
-            $this->errors[] = "An unknown error occurred.";
+            $this->errors[] = "Ett okänt fel har inträffat.";
         }
     }
 }

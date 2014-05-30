@@ -34,7 +34,7 @@ $ad_info = fetch_ad_info($_GET['id']);
 				<h1 style="font-size: 40px; text-decoration: underline;"><?php echo $ad_info['title']; ?></h1><br>
 				<h2 style="font-size: 30px; text-decoration: underline;"><?php echo $ad_info['business_name']; ?></h2>
 				<p style="text-decoration: underline;">Annons ID: <?php echo $ad_info['id']; ?></p><br>
-				<p id="annonsText" style="white-space: pre;"><?php echo $ad_info['description']; ?></p>
+				<textarea readonly id="annonsText" style="white-space: pre; height: 100%; width: 100%; max-width: 650px;"><?php echo $ad_info['description']; ?></textarea>
 				<p></p>
 				<?php
 			}

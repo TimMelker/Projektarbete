@@ -47,11 +47,23 @@ body{
 	background-color: #8CCBE7;
 }
 
-#userName , #password , #userEmail , #regPassword , #regUserName , #regUserEmail
+#userName , #password , #userEmail
 {
 	color: #fff;
 	font-size: 18px;
 	background: #F13C73;
+}
+
+#regUserName , #regUserEmail , #regPassword{
+	color: #fff;
+	font-size: 18px;
+	background: #6bbd46;
+}
+
+#regUserNameBusiness , #regUserEmailBusiness , #regPasswordBusiness{
+	color: #fff;
+	font-size: 18px;
+	background: #3d57a6;
 }
 
 ::-webkit-input-placeholder 
@@ -164,13 +176,22 @@ text-align: justify;
 
  }
 
- #regDiv{
+ #regDivBusiness{
  	padding: 15px;
  	border-radius: 5px;
  	width: 600px;
  	margin-left: auto;
  	margin-right: auto;
- 	border: 2px solid #F13C73;
+ 	border: 2px solid #3d57a6;
+ }
+
+ #regDivStudent{
+ 	padding: 15px;
+ 	border-radius: 5px;
+ 	width: 600px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	border: 2px solid #6bbd46;
  }
 
  .regForm{
@@ -423,8 +444,8 @@ z-index: -1;
 
 #annonsText{
 	white-space: pre;
-	margin-left: 210px;
 	border: 1px solid;
+	resize: none;
 }
 
 #advertInfo{
