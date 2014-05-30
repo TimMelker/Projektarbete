@@ -8,7 +8,7 @@ function myCall(){
 	});
 	request.done(function(msg){
 		var element = ''
-		element += '<div id="mybox" style="width: 500px; height: 500px; border: 1px solid #999; margin-left: 610px; margin-right: auto;">';
+		element += '<div id="mybox" style="width: 500px;  margin-left: auto; margin-right: auto;">';
 		element += '</div>';
 		$("#advert_container").append(element);
 		$("#mybox").html(msg);

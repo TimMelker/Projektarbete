@@ -2,6 +2,8 @@
 session_start();
 if(isset($_SESSION['role']) && $_SESSION['role'] == 1){
 	header("Location: admin.php");
+}elseif(isset($_SESSION['isBusiness']) == 1){
+	header("Location: User_business.php");
 }
 include($_SERVER['DOCUMENT_ROOT'] . "github/projektarbete/login/views/logged_in.php");
 ?>
