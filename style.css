@@ -314,7 +314,7 @@ a , .loginForm input[type="submit"] , .regForm input[type="submit"]{
 
 #regComplete{
 	position: absolute;
-	margin-left: 30%;
+	margin-left: 25%;
 	margin-top: 500px;
 	font-family: helvetica;
 	font-size: 30px;

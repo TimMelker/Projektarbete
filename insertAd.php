@@ -1,4 +1,9 @@
-
+<?php
+session_start();
+if(!isset($_SESSION['user_login_status'])){
+	header("Location: index.php");
+}
+?>
 <!DOCTYPE html>
 <html>
 	<head>

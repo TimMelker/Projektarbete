@@ -1,5 +1,8 @@
 <?php 
-
+session_start();
+if(!isset($_SESSION['user_login_status'])){
+	header("Location: index.php");
+}
 include('adlist.php');
 
 $ad_info = fetch_ad_info($_GET['id']);
@@ -42,7 +45,7 @@ $ad_info = fetch_ad_info($_GET['id']);
 		<br>
 		<div style="width: 1180px; margin-left: auto; margin-right: auto;">
 		<a href="adList_show.php" >Tillbaka till annonser</a>
-		<a href="#" style="float: right;" id="replyBtn" title="svara" name="svara" onclick="myCall()">Svara på annons!</a>
+		<a href="#" style="float: right; height: 18px; margin-top: -10px;" id="replyBtn" title="svara" name="svara" onclick="myCall()">Svara på annons!</a>
 		</div>
 	</div>
 	</body>

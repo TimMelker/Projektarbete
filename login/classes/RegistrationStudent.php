@@ -46,7 +46,7 @@ class RegistrationStudent
             $this->errors[] = "Password has a minimum length of 6 characters";
         } elseif (strlen($_POST['student_name']) > 64 || strlen($_POST['student_name']) < 2) {
             $this->errors[] = "Username cannot be shorter than 2 or longer than 64 characters";
-        } elseif (!preg_match('/^[a-z\d]{2,64}$/i', $_POST['student_name'])) {
+        } elseif (!preg_match('/^[a-z\s-]{2,64}$/i', $_POST['student_name'])) {
             $this->errors[] = "Username does not fit the name scheme: only a-Z and numbers are allowed, 2 to 64 characters";
         } elseif (empty($_POST['student_email'])) {
             $this->errors[] = "Email cannot be empty";
@@ -57,7 +57,7 @@ class RegistrationStudent
         } elseif (!empty($_POST['student_name'])
             && strlen($_POST['student_name']) <= 64
             && strlen($_POST['student_name']) >= 2
-            && preg_match('/^[a-z\d]{2,64}$/i', $_POST['student_name'])
+            && preg_match('/^[a-z\s-]{2,64}$/i', $_POST['student_name'])
             && !empty($_POST['student_email'])
             && strlen($_POST['student_email']) <= 64
             && filter_var($_POST['student_email'], FILTER_VALIDATE_EMAIL)

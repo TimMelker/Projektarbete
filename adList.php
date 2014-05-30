@@ -1,4 +1,7 @@
 <?php
+if(!isset($_SESSION['user_login_status'])){
+	header("Location: index.php");
+}
 
 function fetch_ads(){
 	include($_SERVER['DOCUMENT_ROOT'] . "github/projektarbete/include/models/db_connect.php");

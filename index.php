@@ -91,7 +91,7 @@ Genom tjänsten StudentJobb kan företag snabbt få sina mindre arbeten utförda
 	    	<h2>Inlogg</h2>
 	    	<label>
 	    		<span>Användarnamn: </span>
-	    		<input id="userName" type="text" name="user_name" placeholder="Ditt användarnamn" required /><br>
+	    		<input id="userName" type="text" name="user_name" placeholder="Ditt användarnamn" autocomplete="off" required /><br>
 	    	</label>
 
 	    	<label id="passwordLabel">	    		

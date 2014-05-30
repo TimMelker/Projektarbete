@@ -1,4 +1,10 @@
-<?php include ('adList.php'); ?>
+<?php  
+session_start();
+	if(!isset($_SESSION['user_login_status'])){
+		header("Location: index.php");
+}
+	include ('adList.php');
+?>
 
 <!DOCTYPE html>
 	<html>

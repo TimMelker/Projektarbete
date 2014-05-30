@@ -19,7 +19,9 @@ include($_SERVER['DOCUMENT_ROOT'] . "github/projektarbete/login/views/logged_in.
 
 
 			</div>
-			<button title="Redigera" name="Redigera" onclick="window.location.href='editUser.php'">Redigera</button>	
+			<button title="Redigera" name="Redigera" onclick="window.location.href='editUser.php'">Redigera</button>
+			<button title="Annonser" name="Annonser" onclick="window.location.href='adList_show.php'">Annonser</button>
+	
 		</div>
 	</body>
 </html>
