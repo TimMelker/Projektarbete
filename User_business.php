@@ -9,6 +9,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "github/projektarbete/login/views/logged_in.
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="insertAd.js"></script>
+	<title><?php echo $_SESSION['user_name']; ?>'s profil </title>
 	</head>
 	<body>
 		<div id="userContainer">
@@ -19,7 +20,9 @@ include($_SERVER['DOCUMENT_ROOT'] . "github/projektarbete/login/views/logged_in.
 
 
 			</div>
-			<button title="Redigera" name="Redigera" onclick="window.location.href='editUser.php'">Redigera</button>	
+			<button title="Redigera" name="Redigera" onclick="window.location.href='editUser.php'">Redigera</button>
+			<button title="Annonser" name="Annonser" onclick="window.location.href='adList_show.php'">Annonser</button>
+	
 		</div>
 	</body>
 </html>

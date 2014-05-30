@@ -46,9 +46,9 @@ class Login
     {
         // check login form contents
         if (empty($_POST['user_name'])) {
-            $this->errors[] = "Username field was empty.";
+            $this->errors[] = "Du måste skriva in ett användarnamn";
         } elseif (empty($_POST['user_password'])) {
-            $this->errors[] = "Password field was empty.";
+            $this->errors[] = "Du måste skriva in ett lösenord.";
         } elseif (!empty($_POST['user_name']) && !empty($_POST['user_password'])) {
 
             // create a database connection, using the constants from config/db.php (which we loaded in index.php)
@@ -94,7 +94,7 @@ class Login
                         $_SESSION['isBusiness'] = 1;
 
                     } else {
-                        $this->errors[] = "Wrong password. Try again.";
+                        $this->errors[] = "Fel lösenord. Försök igen.";
                     }
                 } 
                 elseif($result_of_loginStudent_check->num_rows == 1){
@@ -109,16 +109,16 @@ class Login
                     $_SESSION['role'] = $result_row_student->role;
 
                     } else {
-                        $this->errors[] = "Wrong password. Try again.";
+                        $this->errors[] = "Fel lösenord. Försök igen.";
                     }
 
                 } else {
-                    $this->errors[] = "This user does not exist.";
+                    $this->errors[] = "Den här användaren finns inte.";
                 }
 
             }  
             else {
-                $this->errors[] = "Database connection problem.";
+                $this->errors[] = "Databasanslutningsfel.";
             }
         }
     }
@@ -149,7 +149,7 @@ class Login
         $_SESSION = array();
         session_destroy();
         // return a little feeedback message
-        $this->messages[] = "You have been logged out.";
+        $this->messages[] = "Du har blivit utloggad.";
 
     }
 

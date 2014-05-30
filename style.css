@@ -47,11 +47,23 @@ body{
 	background-color: #8CCBE7;
 }
 
-#userName , #password , #userEmail , #regPassword , #regUserName , #regUserEmail
+#userName , #password , #userEmail
 {
 	color: #fff;
 	font-size: 18px;
 	background: #F13C73;
+}
+
+#regUserName , #regUserEmail , #regPassword{
+	color: #fff;
+	font-size: 18px;
+	background: #6bbd46;
+}
+
+#regUserNameBusiness , #regUserEmailBusiness , #regPasswordBusiness{
+	color: #fff;
+	font-size: 18px;
+	background: #3d57a6;
 }
 
 ::-webkit-input-placeholder 
@@ -164,13 +176,22 @@ text-align: justify;
 
  }
 
- #regDiv{
+ #regDivBusiness{
  	padding: 15px;
  	border-radius: 5px;
  	width: 600px;
  	margin-left: auto;
  	margin-right: auto;
- 	border: 2px solid #F13C73;
+ 	border: 2px solid #3d57a6;
+ }
+
+ #regDivStudent{
+ 	padding: 15px;
+ 	border-radius: 5px;
+ 	width: 600px;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	border: 2px solid #6bbd46;
  }
 
  .regForm{
@@ -314,7 +335,7 @@ a , .loginForm input[type="submit"] , .regForm input[type="submit"]{
 
 #regComplete{
 	position: absolute;
-	margin-left: 30%;
+	margin-left: 25%;
 	margin-top: 500px;
 	font-family: helvetica;
 	font-size: 30px;
@@ -388,12 +409,54 @@ z-index: -1;
  	margin-right: auto;
  	padding: 50px;
  	text-align: center;
- 	background-color: #ee3e74;
- 	border: 1px solid #9bcb3c;
+ 	background-color: #98D0E9;
+
  }
 #userHeader {
 	text-align: center;
 	font-size: 25px;
 	
+
+}
+
+
+
+
+
+
+
+#mailP{
+	padding-top: 40px;
+}
+
+#adsList{
+	border: 2px solid #fff;
+	margin-top: 20px;
+	width: 1000px;
+	height: auto;
+	padding-bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#advert_container{
+	border: 2px solid white;
+	min-height: 400px;
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+}
+
+#annonsText{
+	white-space: pre;
+	border: 1px solid;
+	resize: none;
+}
+
+#advertInfo{
+	width: 900px;
+	margin-right: auto;
+	margin-left: 150px;
 
 }

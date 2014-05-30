@@ -1,4 +1,9 @@
-
+<?php
+session_start();
+if(!isset($_SESSION['user_login_status'])){
+	header("Location: index.php");
+}
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -10,8 +15,8 @@
 			<input name="ad_title" id="ad_title" type="text" placeholder="Titel" required /><br>
 		</form>
 		</br>
-		<h1 style="float: left;">Annons text</h1>
-		<textarea cols="50" rows="30"  name="ad_text" form="createAd" placeholder="Skriv in din annonstext här!" required ></textarea>
+		<h1 style="float: left;">Annonstext</h1>
+		<textarea style="white-space: pre;" cols="50" rows="30"  name="ad_text" form="createAd" placeholder="Skriv in din annonstext här!" required ></textarea>
 		<input form="createAd" id="insertAd_btn" type="submit" name="insertAd" value="Lägg in annons"/>
 	</body>
 </html>
