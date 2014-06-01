@@ -6,7 +6,7 @@ if(!isset($_SESSION['user_login_status'])){
 function fetch_ads(){
 	include($_SERVER['DOCUMENT_ROOT'] . "github/projektarbete/include/models/db_connect.php");
 
-	$sql = ('SELECT advert_id AS id, title, description, business_id FROM ads');
+	$sql = ('SELECT advert_id AS id, title, description, business_id FROM ads ORDER BY title');
 
 	$result = mysqli_query($connect, $sql);
 	 

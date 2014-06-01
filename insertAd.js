@@ -9,8 +9,7 @@ function myCall(){
 	});
 	request.done(function(msg){
 		var element = ''
-		element += '<div id="mybox" style="width: 500px; height: 500px; border: 1px solid #999; margin-left: 350px;">';
-		element += '<h1>HEJ</h1>';
+		element += '<div id="mybox" style="width: 500px; margin-left: 350px;">';
 		element += '</div>';
 		$("#userContainer").append(element);
 		$("#mybox").html(msg)
@@ -25,6 +24,15 @@ else{
 	$("#mybox").show();
 	$("#userInfo").hide();
 }
+		$("#logoutBtnPlacementBusiness").css({
+							'position' : 'absolute',
+							'margin-left' : '775px',
+							'margin-top' : '325px',
+							'width' : '0px'});
+
+		$("#loggedIn").css({
+						'width' : '72px'});
+
 }
 
 function myFall(){

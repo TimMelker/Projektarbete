@@ -5,7 +5,6 @@ if(isset($_SESSION['role']) && $_SESSION['role'] == 1){
 }elseif(isset($_SESSION['isBusiness']) == 1){
 	header("Location: User_business.php");
 }
-include($_SERVER['DOCUMENT_ROOT'] . "github/projektarbete/login/views/logged_in.php");
 ?>
 
 <DOCTYPE! html>
@@ -16,22 +15,24 @@ include($_SERVER['DOCUMENT_ROOT'] . "github/projektarbete/login/views/logged_in.
 	<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
-		<?php
-		include ("search_submit.php");
-		?>
 		<div id="userContainer">
 			<h3 id="userHeader">Välkommen <?php echo $_SESSION['user_name']; ?> </h3>
-			
 			<div id="profileImage">
+				<?php 
+					if($_SESSION['user_name'] == "Eric Lindeberg"){
+						?>
+							<img id="profileImg" src="images/profilepic.jpg"/>
+				<?php
+				}
+			?>
 			</div>
-			<div id="userInfo"><!--Samtliga fält från databasen skall in-->
-
-			
-			
-			<form action="User.php" method="POST" enctype="multiform/form-data">
-				Bild: 
-				<input type="file" name="image"><input type="submit" value="Upload">
-			</form>
+				<form id="profilePicForm" action="User.php" method="POST" enctype="multiform/form-data">
+				Välj profilbild
+				<br> 
+				<input type="file" name="image">
+				<br>
+				<input type="submit" value="Upload">
+				</form>
 			<?php
 
 				$db_connection = mysqli_connect('localhost' , 'root' , 'test123' , 'studentjobb');
@@ -44,7 +45,7 @@ include($_SERVER['DOCUMENT_ROOT'] . "github/projektarbete/login/views/logged_in.
    				 echo $_FILES['image']['tmp_name'];
 						}
 				if(!isset($file))
-					echo 'Välj profilbild';
+					echo ("");
 				else {
 					$image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
 					$image_name = $_FILES ['image']['name'];
@@ -65,21 +66,22 @@ include($_SERVER['DOCUMENT_ROOT'] . "github/projektarbete/login/views/logged_in.
 						}
 					}
 				}
-			
-					
-
-				
-
-        		
-        		
-
-    
-
 			?>
+			<div id="userInfo"><!--Samtliga fält från databasen skall in-->
+
+			
+			<p>----Användarens profil skall synas här!----</p>
+			
 		
 			</div>
+			<br><br>
+
+
 			<button title="Redigera" name="Redigera" onclick="window.location.href='editUser.php'">Redigera</button>
 			<button title="Annonser" name="Annonser" onclick="window.location.href='adList_show.php'">Annonser</button>
+			<div id="logoutBtnPlacement">
+				<?php include($_SERVER['DOCUMENT_ROOT'] . "github/projektarbete/login/views/logged_in.php");?>
+			</div>
 		</div>
 	</body>
 </html>

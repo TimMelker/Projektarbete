@@ -276,6 +276,19 @@ a , .loginForm input[type="submit"] , .regForm input[type="submit"]{
 #loggedIn{
 	border-left-width: 60px;
 	border-right-width: 60px;
+	position: absolute;
+}
+
+#logoutBtnPlacement{
+	margin-top: 143px;
+	margin-left: 770px;
+	width: 100%;
+}
+
+#logoutBtnPlacementBusiness{
+	margin-top: 90px;
+	margin-left: 770px;
+	width: 100%;
 }
 
 .loginForm input[type="submit"] , .regForm input[type="submit"] {
@@ -379,7 +392,7 @@ z-index: -1;
 /*Design for User.php*/
  #userContainer {
  	width: 990px;
- 	height: 500px;
+ 	height: 510px;
  	margin-left: auto;
  	margin-right: auto;
  	background-color: #ee3e74;
@@ -393,14 +406,35 @@ z-index: -1;
  	border-radius: 10px;
  	display: inline-block;
  }
+
+ #profileImg{
+ 	width: inherit;
+ 	height: inherit;
+ 	background-size: cover;
+ 	background-position: 50% 50%;
+ 	background-repeat: no-repeat;
+ }
+
+#profilePicForm{
+	position: absolute;
+	margin-top: 370px;
+	margin-left: 50px;
+}
+
  #userInfo{
  	width: 600px;
- 	height: auto;
+ 	height: 200px;
  	background-color: #fff;
  	display: inline-block;
  	margin-top: 50px;
  	border-radius: 10px;
+ 	text-align: center;
  }
+
+#userInfo p{
+	margin-top: 80px
+}
+
  #Container{
  	width: 550px;
  	height: 100%;
@@ -409,7 +443,7 @@ z-index: -1;
  	margin-right: auto;
  	padding: 50px;
  	text-align: center;
- 	background-color: #98D0E9;
+ 	background-color: #8CCBE7;
 
  }
 #userHeader {
